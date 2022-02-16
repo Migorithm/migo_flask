@@ -1,5 +1,5 @@
 import os
-
+from datetime import timedelta
 basedir = os.path.abspath(os.path.dirname(__name__))
 
 class Config:
@@ -13,6 +13,7 @@ class Config:
     MAIL_SENDER="Admin <vertica@example.com>"
     ADMIN = os.environ.get("ADMIN")
     SQLALCHEMY_TRACK_MODIFICATIONS= False
+    REMEMBER_COOKIE_DURATION=timedelta(minutes=30)
 
     @staticmethod
     def init_app(app):
