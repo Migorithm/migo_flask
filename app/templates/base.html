@@ -39,7 +39,7 @@
 {% block content %}
 <div class="container">
     {% for message in get_flashed_messages() %}
-    <div class="alert alert-warning">
+    <div class="alert alert-warning"> <!-- could be alert-info or alert-danger too -->    
         <button type="button" class="close" data-dismiss="warning">&times;</button>
         {{ message }}
     </div>
